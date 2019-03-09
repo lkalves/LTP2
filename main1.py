@@ -26,6 +26,7 @@ class Tarefa(BoxLayout):
 
 class Borel(App):
     def build(self):
+        self.icon='kivy.jpg'
         return Gerenciador()
 
 Borel().run()
