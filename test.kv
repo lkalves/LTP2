@@ -1,0 +1,18 @@
+<Incrementar>:
+	orientation: 'vertical'
+
+	Label:
+		id:label 
+		text: '1'
+		font_size: 50
+	Button:
+		id:botao1
+		text: 'Botão 1'
+		font_size: 30
+		on_release: label.text = str(int(label.text)+1)
+
+	Button:
+		id:botao2
+		text: 'Botão 2'
+		font_size: 30
+		on_release: label.text = '10'
