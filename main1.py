@@ -19,6 +19,9 @@ class Tarefas(Screen):
         self.ids.box.add_widget(Tarefa(text=texto))
         self.ids.texto.text=''
 
+class Sobre(Screen):
+    pass
+
 class Tarefa(BoxLayout):
     def __init__(self,text='',**kwargs):
         super().__init__(**kwargs)
