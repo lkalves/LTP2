@@ -20,7 +20,9 @@ class Tarefas(Screen):
         self.ids.texto.text=''
 
 class Sobre(Screen):
-    pass
+    def addWidget2(self):
+        label2 = Label(text='O Kivy é Brabo!')
+        self.ids.box2.add_widget(Label(text="dsgdgsdgsdfsdfsdf"))
 
 class Tarefa(BoxLayout):
     def __init__(self,text='',**kwargs):
