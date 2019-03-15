@@ -13,7 +13,7 @@
         spacing:20
 
         Image:
-            source: 'kivy.png'
+            source: 'kivy.jpg'
             size_hint_y: None
             height: 200
             allow_stretch: True
@@ -32,12 +32,22 @@
 <Tarefas>:
     BoxLayout:
         orientation: 'vertical'
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title:'Tarefas'
+                    on_release: app.root.current='menu'
+                ActionButton:
+                    text:'Sair'
+                    on_release:app.stop()
         ScrollView:
             BoxLayout:
                 id: box
                 orientation: 'vertical'
                 size_hint_y: None
                 height: self.minimum_height
+               
+                
         BoxLayout:
             size_hint_y: None
             height: 60
@@ -45,9 +55,14 @@
                 id: texto
                 font_size: 30
             Button:
+                text:'<--' 
+                size_hint_x: None        
+                width: 30
+                on_release: app.root.current='menu'
+            Button:
                 text:'+'
                 size_hint_x: None
-                width: 60
+                width: 30
                 on_release: root.addWidget()
 
 <Tarefa>:
@@ -61,6 +76,20 @@
         size_hint_x: None
         width: 60
         on_release: app.root.get_screen('tarefas').ids.box.remove_widget(root)
+    
 
 <Sobre>:
     BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'pega a visão!!!!'
+        Button:
+            orientation:'vertical'
+            height: 30
+            width: 30
+            text: 'Voltar'
+            on_release: app.root.current='menu'
+
+
+            
+            
