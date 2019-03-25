@@ -1,3 +1,4 @@
+
 <Gerenciador>:
     Menu:
         name: 'menu'
@@ -7,6 +8,7 @@
         name: 'sobre'
     
 <Menu>:
+    
     BoxLayout:
         orientation: 'vertical'
         padding:100
@@ -77,8 +79,7 @@
             text: 'Quem ensinou a gente a fazer é hacker!'
         Button:
             orientation:'vertical'
-            height: 30
-            width: 30
+            size_hint_y: None
             text: 'Voltar'
             on_release: app.root.current='menu'
 
