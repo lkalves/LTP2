@@ -16,6 +16,9 @@
 
         Image:
             source: 'nirvana.jpg'
+
+            source: 'kivy.jpg'
+
             size_hint_y: None
             height: 200
             allow_stretch: True
@@ -34,6 +37,14 @@
 <Tarefas>:
     BoxLayout:
         orientation: 'vertical'
+        ActionBar:
+            ActionView:
+                ActionPrevious:
+                    title:'Tarefas'
+                    on_release: app.root.current='menu'
+                ActionButton:
+                    text:'Sair'
+                    on_release:app.stop()
         ScrollView:
             BoxLayout:
                 id: box
@@ -80,6 +91,12 @@
         Button:
             orientation:'vertical'
             size_hint_y: None
+            text: 'pega a visão!!!!'
+        Button:
+            orientation:'vertical'
+            height: 30
+            width: 30
+
             text: 'Voltar'
             on_release: app.root.current='menu'
 

@@ -1,6 +1,11 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout 
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.lang import Builder
+
+
+with open('borel.kv', encoding='utf8') as f:
+    Builder.load_string(f.read())
 
 class Gerenciador(ScreenManager):
     pass
@@ -29,9 +34,11 @@ class Tarefa(BoxLayout):
         super().__init__(**kwargs)
         self.ids.label.text=text
 
-class Borel(App):
+class Borelzada(App):
     def build(self):
         self.icon='kivy.jpg'
         return Gerenciador()
 
+
 Borel().run()
+Borelzada().run()
